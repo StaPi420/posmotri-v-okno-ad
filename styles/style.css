@@ -40,23 +40,19 @@ ol {
   list-style: none;
 }
 
-/* Кастомный скроллбар */
-.custom-scrollbar::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 4px;
 }
 
-.custom-scrollbar::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   background: rgb(217 217 217 / 10%);
 }
 
-.custom-scrollbar::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background-color: #D9D9D9;
 }
 
 .content {
-  /*width: 1140px;*/
-  /*height: 564px;*/
-  /*padding: 133px 30px;*/
   display: grid;
   grid-template-areas: "result details";
   align-items: end;
@@ -140,7 +136,6 @@ ol {
 
 
 .content__video-card-thumbnail {
-  /* видео для видеокарточки */
   object-fit:cover;
   object-position: center;
   width: 194px;
@@ -148,7 +143,6 @@ ol {
 }
 
 .content__video-card-title {
-  /* подзаголовок видеокарточки с ... */
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 30px;
   line-height: 40px;
@@ -162,7 +156,6 @@ ol {
 }
 
 .content__video-card-description {
-  /* описание видеокарточки с ... */
   font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -176,7 +169,6 @@ ol {
 }
 
 .content__video-card-description-container {
-  /* левая часть видеокарточки с текстом */
   display: flex;
   flex-grow: 1;
   flex-direction: column;
@@ -263,7 +255,6 @@ ol {
 }
 
 .search-form__fieldset {
-  /* сброс рамки */
   border: none;
   display: flex;
   flex-direction: column;
@@ -277,8 +268,8 @@ ol {
 }
 
 .search-form__label {
-  /* элементы фэйлдсет */
   display: flex;
+  flex-direction: row;
   align-items: center;
   width: fit-content;
   gap: 5px;
@@ -301,7 +292,6 @@ ol {
 }
 
 .search-form__textfield {
-  /* Стилизация input[type="text"] */
   appearance: none;
   border: none;
   outline: none;
@@ -317,14 +307,12 @@ ol {
 }
 
 .search-form__checkbox-list {
-  /* чекбоксы в линию */
   display: flex;
   gap:15px;
   justify-content: center;
 }
 
 .search-form__pseudo-checkbox {
-  /* Стилизация чекбокса */
   position: relative;
   width: 19px;
   height: 19px;
@@ -333,7 +321,6 @@ ol {
 }
 
 .search-form__pseudo-checkbox::after {
-  /* Внутренний квадрат — скрыт по умолчанию */
   content: "";
   position: absolute;
   top: 1px;
@@ -345,6 +332,5 @@ ol {
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
-  /* Показываем квадрат, если чекбокс отмечен */
   display: block;
 }
